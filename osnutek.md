@@ -11,3 +11,5 @@ Države katere imajo rast kakovosti in zakaj?
 Faktorji ki vplivajo na kakovost življenja?
 
 Države, pri katerih pada kakovost, in zakaj?
+
+Kaj bi lahko napovedovali za prihodnja leta?
