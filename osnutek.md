@@ -21,3 +21,8 @@ https://www.kaggle.com/datasets/unsdsn/world-happiness
 https://hdr.undp.org/data-center/human-development-index#/indicies/HDI 
 
 https://ec.europa.eu/eurostat/web/quality-of-life/overview 
+
+https://www.kaggle.com/datasets/marcelobatalhah/quality-of-life-index-by-country/data
+
+https://www.kaggle.com/datasets/abdullahmeo/updated-quality-of-life
+
