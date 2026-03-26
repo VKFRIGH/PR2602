@@ -26,3 +26,5 @@ https://www.kaggle.com/datasets/marcelobatalhah/quality-of-life-index-by-country
 
 https://www.kaggle.com/datasets/abdullahmeo/updated-quality-of-life
 
+https://datacatalog.worldbank.org/search/dataset/0037712/world-development-indicators
+
