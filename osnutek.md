@@ -18,6 +18,9 @@ Kaj bi lahko napovedovali za prihodnja leta?
 
 https://www.kaggle.com/datasets/unsdsn/world-happiness 
 
+https://www.worldhappiness.report/data-sharing/ 
+tukaj so aktualnejši WHR podatki, če slučajno kdo potrebuje
+
 https://hdr.undp.org/data-center/human-development-index#/indicies/HDI 
 
 https://ec.europa.eu/eurostat/web/quality-of-life/overview 
