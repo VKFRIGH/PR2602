@@ -1,4 +1,4 @@
-# Projekt na temo kakovosti življenja
+# Kakovost življenja: primerjava , dejavniki in prihodnji trendi
 
 Analizirati kakovost življenja v različnih državah in dejavnike ki vplivajo na to.
 
