@@ -1,2 +1,5 @@
 data/*
 !quality_of_life_indices_by_country.csv
+!P_Data_Extract_From_World_Development_Indicators.xlsx
+!HDR25_Composite_indices_complete_time_series.csv
+!WHR26_Data_Figure_2.1.xlsx
