@@ -18,10 +18,10 @@ Poleg naštetega, nas tudi zanima, kaj bi lahko napovedovali za prihodnja leta. 
 Podatke smo pridobili iz štirih virov:  
 
 
-- World Happiness Report
-- UNDP Human Development Index
-- World Bank DataBank (World Development Indicators)
-- Numbeo Quality of Life Index
+- [World Happiness Report](https://www.worldhappiness.report/data-sharing/ )
+- [UNDP Human Development Index](https://hdr.undp.org/data-center/human-development-index#/indicies/HDI)
+- [World Bank DataBank (World Development Indicators)](https://datacatalog.worldbank.org/search/dataset/0037712/world-development-indicators)
+- [Numbeo Quality of Life Index](https://www.kaggle.com/datasets/marcelobatalhah/quality-of-life-index-by-country/data)
 
 Te smo izbrali, ker so poleg ustreznosti za našo temo tudi dovolj obsežni in relevantni. Pri prvih dveh vprašanjih, enako kot pri preostalih treh, smo podatke združili v dve ločeni tabeli. V prvi tabeli ima vsaka država eno vrstico, stolpci pa predstavljajo posamezne atribute za leto 2023. Pri preostalih vprašanjih pa je tabela strukturirana tako, da ima vsaka država za vsako leto svojo vrstico, stolpci pa predstavljajo posamezne značilnosti države. 
 
@@ -64,15 +64,15 @@ Poleg tega smo uporabili tudi korelacijsko matriko, ki omogoča analizo povezav 
 
 ## Ugotovitve
 
-Vprašanje, katera država ima trenutno najvišjo kakovost življenja, je težko odgovoriti povsem natančno, saj prihodnjih trendov še nismo analizirali. Na podlagi rezultatov za leto 2023 pa lahko sklepamo, da je na prvem mestu Norveška, saj je v tem letu dosegla najvišjo skupno vrednost kazalnika kakovosti življenja.
+Na vprašanje, katera država ima najvišjo kakovost življenja, lahko na podlagi naših izračunov odgovorimo, da je to Norveška, saj dosega najvišjo skupno vrednost kazalnika, kar jo uvršča na prvo mesto.
 
-Razloge za njen vodilni položaj najlažje pojasnimo z interpretacijo spodnjega grafa. Iz njega je razvidno, da ima Norveška sicer nekoliko nižji Ladder score v primerjavi s povprečjem najboljših desetih držav, vendar izrazito izstopa pri drugih kazalnikih. Dosega zelo visoko stopnjo svobode (z-score približno 2,2, kar jo uvršča med približno 1 % najboljših držav), hkrati pa izkazuje tudi višjo raven radodarnosti in nižjo zaznano korupcijo. Kombinacija teh dejavnikov, skupaj z nadpovprečnim BDP glede na povprečje najboljših držav, vodi do tega, da Norveška zasede prvo mesto.
+Razloge za njen vodilni položaj najlažje pojasnimo z interpretacijo spodnjega grafa. Iz njega je razvidno, da ima Norveška sicer nekoliko nižji Ladder score v primerjavi s povprečjem desetih najbolje uvrščenih držav, vendar izrazito izstopa pri drugih kazalnikih. Dosega zelo visoko stopnjo svobode (z-vrednost približno 2,2, kar jo uvršča med približno 1 % najboljših držav), hkrati pa izkazuje tudi višjo raven radodarnosti ter nižjo zaznano stopnjo korupcije. Kombinacija teh dejavnikov, skupaj z nadpovprečnim BDP na prebivalca glede na povprečje najboljših držav, vodi do tega, da Norveška zasede prvo mesto.
 
 <img src="https://github.com/user-attachments/assets/ab3298fb-f17d-4232-bd69-dd93e4cc29da" width="90%" />
 
-Na vprašanje o rasti in upadanju kakovosti življenja lahko odgovorimo na podlagi spodnjega grafa, ki prikazuje neto spremembo kakovosti življenja evropskih držav v obdobju 2014–2025. Iz grafa je razvidno, da sta največjo rast dosegli Ukrajina in Rusija, medtem ko so najmanjšo rast zabeležile Švica, Nemčija, Finska in Danska, ki jih sicer pogosto dojemamo kot razvite države.
+Na vprašanje o rasti in upadanju kakovosti življenja lahko odgovorimo na podlagi spodnjega grafa, ki prikazuje neto spremembo kakovosti življenja evropskih držav v obdobju 2014–2025. Iz grafa je razvidno, da sta največjo relativno rast dosegli Ukrajina in Rusija, medtem ko so najmanjše spremembe zabeležile Švica, Nemčija, Finska in Danska.
 
-Vendar pa je takšna interpretacija lahko zavajajoča, saj sama rast ne odraža nujno dejanske ravni kakovosti življenja. Povečanje iz 90 na 100 je namreč bistveno težje doseči kot rast iz 0 na 50. Zato je za bolj realno sliko smiselno upoštevati tudi fasetne grafe (prikazane v poglavju Ovrednotenje podatkov), ki omogočajo celovitejšo primerjavo.
+Pri interpretaciji teh rezultatov je treba upoštevati, da relativna rast ne odraža nujno dejanske ravni kakovosti življenja. Države z že visoko začetno vrednostjo težje dosegajo velike spremembe kot države z nižjim izhodiščem. Zato je za celovitejšo razumevanje smiselno upoštevati tudi absolutne vrednosti in dodatne vizualizacije, kot so fasetni grafi (prikazani v poglavju Ovrednotenje podatkov), ki omogočajo bolj uravnoteženo primerjavo.
 
 
 <img src="https://github.com/user-attachments/assets/9c8bd7d9-d93f-4cd0-9675-e4f88be4d1cb" width="90%" />
@@ -86,6 +86,6 @@ Prav tako je razvidno, da ima indeks onesnaževanja izrazit negativen vpliv, kar
 
 ## Zaključek in povezave do kode ter podrobnejšega opisa postopkov
 
-Zaradi omejitve obsega (900 besed) v poročilo nismo vključili izvorne kode in podrobnejših opisov postopkov. Ti so na voljo v preostalih dveh vejah repozitorija: podrobnosti za prvi dve raziskovalni vprašanji se nahajajo v veji J_PR_Projekt, analize za preostala tri vprašanja pa v veji B+K_PR_Projekt.
+Zaradi omejitve obsega (900 besed) v poročilo nismo vključili izvorne kode in podrobnejših opisov postopkov. Ti so na voljo v preostalih dveh vejah repozitorija: podrobnosti za prvi dve raziskovalni vprašanji se nahajajo v veji [J_PR_Projekt](https://github.com/VKFRIGH/PR2602/blob/J_PR_Projekt/projektJ.ipynb), analize za preostala tri vprašanja pa v veji [B+K_PR_Projekt](https://github.com/VKFRIGH/PR2602/blob/B%2BK_PR_Projekt/projektB%2BK.ipynb).
 
 V prihodnje nameravamo raziskavo nadgraditi z analizo prihodnjih trendov kakovosti življenja ter z implementacijo interaktivnega vpogleda v podatke in ključne ugotovitve.
