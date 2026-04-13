@@ -59,3 +59,8 @@ Prav tako je razvidno, da ima indeks onesnaževanja izrazit negativen vpliv, kar
 
 <img width="700" height="650" alt="image" src="https://github.com/user-attachments/assets/12f92fba-c693-4d37-b497-fabb8701c319" />
 
+## Zaključek in povezave do kode ter podrobnejšega opisa postopkov
+
+Ker poročilo zaradi omejitve (900 besed) ne sme biti preobsežno, vanj nismo vključili izvorne kode in podrobnejših razlag postopkov. Te so dostopne v preostalih dveh vejah repozitorija: podrobnosti za prvi dve raziskovalni vprašanji se nahajajo v veji J_PR_Projekt, medtem ko so analize za preostala tri vprašanja zbrane v veji B+K_PR_Projekt.
+
+V prihodnje nameravamo raziskavo še nadgraditi, in sicer z odgovorom na vprašanje o prihodnjih trendih kakovosti življenja ter z implementacijo interaktivnega vpogleda v podatke in ključne ugotovitve.
