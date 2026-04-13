@@ -1,11 +1,33 @@
 # Kakovost življenja: primerjava, dejavniki in prihodnji trendi
-VID KOVAČIČ,  JAKOB IHAN, BOR KAJIN, KRISTJAN HANDANOVIĆ
-     
+VID KOVAČIČ,  JAKOB IHAN, BOR KAJIN, KRISTJAN HANDANOVIĆ<br>
+
 ## Uvod
-Za projekt smo se odločili raziskati kakovost življenja po svetu, pri čemer smo si za lažjo strukturiranost dela zastavili več raziskovalnih vprašanj, kot so katera država ima najbolj kakovostno življenje, zakaj ima najboljšo kakovost, katere države beležijo rast kakovosti in zakaj, kateri faktorji vplivajo na kakovost življenja ter pri katerih državah kakovost pada in zakaj. Poleg tega nas zanima tudi, kaj bi lahko napovedovali za prihodnja leta. Na večino teh vprašanj smo tekom raziskave že uspešno odgovorili, medtem ko zadnje vprašanje še vedno obdelujemo, saj je nekoliko zahtevnejše v primerjavi z ostalimi.
+
+Pri našem projektu smo se odločili raziskati kakovost življenja po svetu. V strukturno oporo poteku dela, smo si zastavili več raziskovalnih vprašanj: 
+
+1. Katera država ima najbolj kakovostno življenje?
+2. Zakaj ima najboljšo kakovost življenja?
+3. Katere države beležijo rast kakovosti in zakaj? 
+4. Kateri faktorji vplivajo na kakovost življenja? 
+5. Pri katerih državah kakovost pada in zakaj? 
+
+Poleg naštetega, nas tudi zanima, kaj bi lahko napovedovali za prihodnja leta. Na večino teh vprašanj smo tekom raziskave že uspešno odgovorili, medtem ko zadnje vprašanje še vedno obdelujemo, saj je nekoliko zahtevnejše od ostalih.
 
 ## Podatki in njihova priprava
-Podatke za projekt smo pridobili iz štirih virov: World Happiness Report, UNDP Human Development Index, World Bank DataBank (World Development Indicators) in Numbeo Quality of Life Index. Te vire smo izbrali, ker so poleg ustreznosti za našo temo tudi dovolj obsežni in relevantni. Podatke smo za prvo in drugo vprašanje ter za naslednja tri vprašanja združili v enotne tabele. Pri prvih dveh vprašanjih smo baze združili tako, da ima vsaka država eno vrstico, stolpci pa predstavljajo posamezne atribute za to državo za leto 2023. Pri preostalih vprašanjih pa je tabela strukturirana tako, da ima vsaka država in vsako leto svojo vrstico, stolpci pa predstavljajo posamezne značilnosti države. Za lažje združevanje tabel smo uporabili orodje Country Converter, ki nam je poenostavilo standardizacijo držav po ISO kodah, saj so nekatere baze že uporabljale ISO oznake, druge pa ne. Zato smo morali zagotoviti enoten format vseh tabel pred združevanjem. Po združitvi podatkov smo dodatno odstranili oziroma popravili redundantne, podvojene in manjkajoče vrednosti, saj bi lahko vplivale na kasnejšo analizo. Posebno pozornost smo namenili atributom z enakim pomenom ter spremenljivkam, ki niso prispevale k raziskavi, kot so nepotrebne interpretacije 
+
+Podatke smo pridobili iz štirih virov:  
+
+
+- World Happiness Report
+- UNDP Human Development Index
+- World Bank DataBank (World Development Indicators)
+- Numbeo Quality of Life Index
+
+Te smo izbrali, ker so poleg ustreznosti za našo temo tudi dovolj obsežni in relevantni. Pri prvih dveh vprašanjih, enako kot pri preostalih treh, smo podatke združili v dve ločeni tabeli. V prvi tabeli ima vsaka država eno vrstico, stolpci pa predstavljajo posamezne atribute za leto 2023. Pri preostalih vprašanjih pa je tabela strukturirana tako, da ima vsaka država za vsako leto svojo vrstico, stolpci pa predstavljajo posamezne značilnosti države. 
+
+Za lažje združevanje smo uporabili orodje Country Converter, ki nam je omogočilo standardizacijo držav po ISO kodah, saj so nekatere baze te oznake že vsebovale, druge pa ne. Zato smo morali pred združevanjem zagotoviti enoten format vseh tabel. 
+
+Po združitvi smo podatke dodatno očistili — odstranili oziroma popravili smo redundantne, podvojene in manjkajoče vrednosti, saj bi te lahko vplivale na nadaljnjo analizo. Posebno pozornost smo namenili atributom z enakim pomenom ter spremenljivkam, ki niso prispevale k raziskavi.
 
 ### Zaključna tabela 1
 | iso_code | Country name | Ladder score | Logged GDP per capita | Social support | Healthy life expectancy | Freedom to make life choices | Generosity | Perceptions of corruption | HDI rank | Human Development Index (HDI) | Expected years of schooling | Mean years of schooling | Individuals using the Internet (% of population) | School enrollment, primary (% net) |
@@ -27,41 +49,43 @@ Podatke za projekt smo pridobili iz štirih virov: World Happiness Report, UNDP 
 | Austria      | AUT          | 2023 | 88.61718                           | 95.3347                                          | 6.9050                           | 1.885000           | 1.336000       | 0.696000                 | 0.703000                       | 7.0      | 184.55                 | 88.40                  | 72.55        | 76.85              | 67.35                  | 10.45                        | 24.30                      | 21.30           | 77.00          |
 
 ## Ovrednotenje podatkov
-Ko smo podatke pretvorili v uporabno obliko, jih je bilo treba še ovrednotiti. Pri prvih dveh vprašanjih smo uporabili metodo Borda count, saj ta pristop bistveno poenostavi analizo, ker normalizacija tabele ni potrebna. Pri tem pa smo morali biti pozorni, da smo izključili atribute, kot sta ISO koda in ime države, saj bi lahko vplivali na napačno interpretacijo rezultatov. Prav tako smo morali nekatere spremenljivke obrniti, ker nižja vrednost v določenih primerih pomeni boljše stanje (npr. zaznanvanje korupcije).
+Ko smo podatke pretvorili v uporabno obliko, jih je bilo treba tudi ovrednotiti. Pri prvih dveh vprašanjih smo uporabili metodo Borda count, saj ta pristop bistveno poenostavi analizo, ker normalizacija podatkov ni potrebna. Pri tem smo morali izločiti atribute, kot sta ISO koda in ime države, saj bi lahko vplivali na napačno interpretacijo rezultatov. Prav tako smo nekatere spremenljivke obrnili, ker v določenih primerih nižja vrednost pomeni boljše stanje (npr. zaznavanje korupcije).
 
-<img width="600" height="360" alt="image" src="https://github.com/user-attachments/assets/23b528da-2992-423c-9dee-963a91a072fa" />
-<img src="https://github.com/user-attachments/assets/23b528da-2992-423c-9dee-963a91a072fa" style="max-width: 100%;" />
+<img src="https://github.com/user-attachments/assets/23b528da-2992-423c-9dee-963a91a072fa" width="90%" />
 
+Pri preostalih treh vprašanjih smo uporabili več metod ovrednotenja. Ena izmed njih je razlika med zadnjim in prvim letom zbiranja podatkov, ki predstavlja dober pokazatelj napredka posameznih držav. Vendar pa ta metoda ne omogoča vpogleda v trende skozi čas niti ne odraža trenutnega stanja v širšem kontekstu razvoja države.
 
-Pri odgovarjanju na preostala tri vprašanja smo uporabili več metod ovrednotenja. Prva med njimi je razlika med zadnjim in prvim letom zbiranja podatkov, ki predstavlja dober pokazatelj, katere države so danes v boljšem položaju kot na začetku opazovanega obdobja. Vendar ta metoda ne omogoča vpogleda v trende rasti ali padanja skozi čas, niti ne pokaže trenutnega stanja v kontekstu celotnega razvoja države.Za bolj celovito analizo smo zato uporabili fasetne grafe, ki omogočajo neposredno primerjavo razvojnih poti posameznih evropskih držav skozi čas. Na ta način je mogoče lažje prepoznati dolgoročne trende rasti ali upadanja ter oceniti trenutno stanje v primerjavi s preteklostjo.
+Za bolj celovito analizo smo zato uporabili fasetne grafe, ki omogočajo neposredno primerjavo razvojnih poti evropskih držav skozi čas. Na ta način lahko lažje prepoznamo dolgoročne trende ter ocenimo trenutno stanje v primerjavi s preteklostjo.
 
-<img width="600" height="700" alt="image" src="https://github.com/user-attachments/assets/6b9aef99-e24f-4674-928d-00e2520c3964" />
-
-Poleg tega smo uporabili tudi korelacijsko matriko, ki nam omogoča ugotavljanje povezav in vplivov posameznih spremenljivk na kakovost življenja.
+<img src="https://github.com/user-attachments/assets/6b9aef99-e24f-4674-928d-00e2520c3964" width="90%" />
 
 
+Poleg tega smo uporabili tudi korelacijsko matriko, ki omogoča analizo povezav med posameznimi spremenljivkami ter njihovega vpliva na kakovost življenja.
 
 ## Ugotovitve
 
 Vprašanje, katera država ima trenutno najvišjo kakovost življenja, je težko odgovoriti povsem natančno, saj prihodnjih trendov še nismo analizirali. Na podlagi rezultatov za leto 2023 pa lahko sklepamo, da je na prvem mestu Norveška, saj je v tem letu dosegla najvišjo skupno vrednost kazalnika kakovosti življenja.
-Razlog za njen vodilni položaj je najlažje pojasniti z interpretacijo spodnjega grafa. Iz njega je razvidno, da ima Norveška sicer nekoliko nižji Ladder score v primerjavi s povprečjem najboljših 10 držav, vendar izrazito izstopa pri drugih kazalnikih. Dosega zelo visoko stopnjo svobode (z-score približno 2,2, kar jo uvršča med približno 1 % najboljših držav), prav tako pa izkazuje višjo raven radodarnosti in boljšo (nižjo) zaznano korupcijo. Kombinacija teh dejavnikov, skupaj z nekoliko nadpovprečnim BDP glede na top 10 povprečje, na koncu vodi do tega, da Norveška zasede prvo mesto.
 
-<img width="800" height="558" alt="image" src="https://github.com/user-attachments/assets/ab3298fb-f17d-4232-bd69-dd93e4cc29da" />
+Razloge za njen vodilni položaj najlažje pojasnimo z interpretacijo spodnjega grafa. Iz njega je razvidno, da ima Norveška sicer nekoliko nižji Ladder score v primerjavi s povprečjem najboljših desetih držav, vendar izrazito izstopa pri drugih kazalnikih. Dosega zelo visoko stopnjo svobode (z-score približno 2,2, kar jo uvršča med približno 1 % najboljših držav), hkrati pa izkazuje tudi višjo raven radodarnosti in nižjo zaznano korupcijo. Kombinacija teh dejavnikov, skupaj z nadpovprečnim BDP glede na povprečje najboljših držav, vodi do tega, da Norveška zasede prvo mesto.
 
-Na vprašanje o rasti in padanju kakovosti življenja lahko odgovorimo na podlagi spodnjega grafa, ki prikazuje neto spremembo kakovosti življenja evropskih držav(2014-2025). Iz njega je razvidno, da sta največjo rast dosegli Ukrajina in Rusija, medtem ko so najmanjšo rast zabeležile Švica, Nemčija, Finska in Danska, ki jih sicer običajno dojemamo kot bolj razvite države. Vendar pa je ta graf lahko zavajajoč, saj sama rast ne odraža nujno dejanske kakovosti življenja. Povečanje iz 90 na 100 je bistveno težje doseči kot rast iz 0 na 50, zato je za bolj realno sliko smiselno upoštevati tudi fasetne grafe (slika v poglavju ovrednotenje podatkov), ki omogočajo celovitejšo primerjavo.
+<img src="https://github.com/user-attachments/assets/ab3298fb-f17d-4232-bd69-dd93e4cc29da" width="90%" />
+
+Na vprašanje o rasti in upadanju kakovosti življenja lahko odgovorimo na podlagi spodnjega grafa, ki prikazuje neto spremembo kakovosti življenja evropskih držav v obdobju 2014–2025. Iz grafa je razvidno, da sta največjo rast dosegli Ukrajina in Rusija, medtem ko so najmanjšo rast zabeležile Švica, Nemčija, Finska in Danska, ki jih sicer pogosto dojemamo kot razvite države.
+
+Vendar pa je takšna interpretacija lahko zavajajoča, saj sama rast ne odraža nujno dejanske ravni kakovosti življenja. Povečanje iz 90 na 100 je namreč bistveno težje doseči kot rast iz 0 na 50. Zato je za bolj realno sliko smiselno upoštevati tudi fasetne grafe (prikazane v poglavju Ovrednotenje podatkov), ki omogočajo celovitejšo primerjavo.
 
 
-<img width="700" height="700" alt="image" src="https://github.com/user-attachments/assets/9c8bd7d9-d93f-4cd0-9675-e4f88be4d1cb" />
+<img src="https://github.com/user-attachments/assets/9c8bd7d9-d93f-4cd0-9675-e4f88be4d1cb" width="90%" />
 
 
-Na zadnje vprašanje lahko najlažje odgovorimo s pomočjo korelacijske matrike, iz katere je razvidno, kateri dejavniki so najmočneje povezani s kakovostjo življenja. Opazimo, da ima kakovost življenja najvišjo pozitivno korelacijo z oceno zadovoljstva z življenjem ter kupno močjo, kar nakazuje, da sta za posameznike ključnega pomena predvsem finančna varnost in splošno zadovoljstvo z življenjem v državi bivanja.
+Na zadnje vprašanje lahko najlažje odgovorimo s pomočjo korelacijske matrike. Ta razkriva, kateri dejavniki so najmočneje povezani s kakovostjo življenja. Opazimo, da ima kakovost življenja najvišjo pozitivno korelacijo z zadovoljstvom z življenjem ter kupno močjo, kar nakazuje, da sta za posameznike ključnega pomena predvsem finančna varnost in splošno zadovoljstvo z življenjem.
 
-Prav tako je razvidno, da ima indeks onesnaževanja izrazit negativen vpliv, kar pomeni, da ljudje visoko vrednotijo čisto in zdravo okolje. Poleg teh glavnih korelacij pomembno vlogo igra tudi kakovost zdravstvenega sistema, saj ta neposredno vpliva na daljšo pričakovano življenjsko dobo in višjo kakovost vsakdanjega življenja.
+Prav tako je razvidno, da ima indeks onesnaževanja izrazit negativen vpliv, kar pomeni, da ljudje visoko vrednotijo čisto in zdravo okolje. Pomembno vlogo ima tudi kakovost zdravstvenega sistema, saj ta neposredno vpliva na daljšo pričakovano življenjsko dobo in višjo kakovost vsakdanjega življenja.
 
-<img width="700" height="650" alt="image" src="https://github.com/user-attachments/assets/12f92fba-c693-4d37-b497-fabb8701c319" />
+<img src="https://github.com/user-attachments/assets/12f92fba-c693-4d37-b497-fabb8701c319" width="75%" />
 
 ## Zaključek in povezave do kode ter podrobnejšega opisa postopkov
 
-Ker poročilo zaradi omejitve (900 besed) ne sme biti preobsežno, vanj nismo vključili izvorne kode in podrobnejših razlag postopkov. Te so dostopne v preostalih dveh vejah repozitorija: podrobnosti za prvi dve raziskovalni vprašanji se nahajajo v veji J_PR_Projekt, medtem ko so analize za preostala tri vprašanja zbrane v veji B+K_PR_Projekt.
+Zaradi omejitve obsega (900 besed) v poročilo nismo vključili izvorne kode in podrobnejših opisov postopkov. Ti so na voljo v preostalih dveh vejah repozitorija: podrobnosti za prvi dve raziskovalni vprašanji se nahajajo v veji J_PR_Projekt, analize za preostala tri vprašanja pa v veji B+K_PR_Projekt.
 
-V prihodnje nameravamo raziskavo še nadgraditi, in sicer z odgovorom na vprašanje o prihodnjih trendih kakovosti življenja ter z implementacijo interaktivnega vpogleda v podatke in ključne ugotovitve.
+V prihodnje nameravamo raziskavo nadgraditi z analizo prihodnjih trendov kakovosti življenja ter z implementacijo interaktivnega vpogleda v podatke in ključne ugotovitve.
