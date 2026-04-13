@@ -30,6 +30,7 @@ Podatke za projekt smo pridobili iz štirih virov: World Happiness Report, UNDP 
 Ko smo podatke pretvorili v uporabno obliko, jih je bilo treba še ovrednotiti. Pri prvih dveh vprašanjih smo uporabili metodo Borda count, saj ta pristop bistveno poenostavi analizo, ker normalizacija tabele ni potrebna. Pri tem pa smo morali biti pozorni, da smo izključili atribute, kot sta ISO koda in ime države, saj bi lahko vplivali na napačno interpretacijo rezultatov. Prav tako smo morali nekatere spremenljivke obrniti, ker nižja vrednost v določenih primerih pomeni boljše stanje (npr. zaznanvanje korupcije).
 
 <img width="600" height="360" alt="image" src="https://github.com/user-attachments/assets/23b528da-2992-423c-9dee-963a91a072fa" />
+<img src="https://github.com/user-attachments/assets/23b528da-2992-423c-9dee-963a91a072fa" style="max-width: 100%;" />
 
 
 Pri odgovarjanju na preostala tri vprašanja smo uporabili več metod ovrednotenja. Prva med njimi je razlika med zadnjim in prvim letom zbiranja podatkov, ki predstavlja dober pokazatelj, katere države so danes v boljšem položaju kot na začetku opazovanega obdobja. Vendar ta metoda ne omogoča vpogleda v trende rasti ali padanja skozi čas, niti ne pokaže trenutnega stanja v kontekstu celotnega razvoja države.Za bolj celovito analizo smo zato uporabili fasetne grafe, ki omogočajo neposredno primerjavo razvojnih poti posameznih evropskih držav skozi čas. Na ta način je mogoče lažje prepoznati dolgoročne trende rasti ali upadanja ter oceniti trenutno stanje v primerjavi s preteklostjo.
