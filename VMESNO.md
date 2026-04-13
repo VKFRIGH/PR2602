@@ -50,15 +50,15 @@ Po združitvi smo podatke dodatno očistili — odstranili oziroma popravili smo
 
 ## Ovrednotenje podatkov
 Ko smo podatke pretvorili v uporabno obliko, jih je bilo treba tudi ovrednotiti. Pri prvih dveh vprašanjih smo uporabili metodo Borda count, saj ta pristop bistveno poenostavi analizo, ker normalizacija podatkov ni potrebna. Pri tem smo morali izločiti atribute, kot sta ISO koda in ime države, saj bi lahko vplivali na napačno interpretacijo rezultatov. Prav tako smo nekatere spremenljivke obrnili, ker v določenih primerih nižja vrednost pomeni boljše stanje (npr. zaznavanje korupcije).
-
-<img src="https://github.com/user-attachments/assets/23b528da-2992-423c-9dee-963a91a072fa" width="90%" />
-
+<br><br>
+<img src="https://github.com/user-attachments/assets/23b528da-2992-423c-9dee-963a91a072fa" width="90%"  />
+<br><br>
 Pri preostalih treh vprašanjih smo uporabili več metod ovrednotenja. Ena izmed njih je razlika med zadnjim in prvim letom zbiranja podatkov, ki predstavlja dober pokazatelj napredka posameznih držav. Vendar pa ta metoda ne omogoča vpogleda v trende skozi čas niti ne odraža trenutnega stanja v širšem kontekstu razvoja države.
 
 Za bolj celovito analizo smo zato uporabili fasetne grafe, ki omogočajo neposredno primerjavo razvojnih poti evropskih držav skozi čas. Na ta način lahko lažje prepoznamo dolgoročne trende ter ocenimo trenutno stanje v primerjavi s preteklostjo.
-
+<br><br>
 <img src="https://github.com/user-attachments/assets/6b9aef99-e24f-4674-928d-00e2520c3964" width="90%" />
-
+<br><br>
 
 Poleg tega smo uporabili tudi korelacijsko matriko, ki omogoča analizo povezav med posameznimi spremenljivkami ter njihovega vpliva na kakovost življenja.
 
@@ -67,23 +67,23 @@ Poleg tega smo uporabili tudi korelacijsko matriko, ki omogoča analizo povezav 
 Na vprašanje, katera država ima najvišjo kakovost življenja, lahko na podlagi naših izračunov odgovorimo, da je to Norveška, saj dosega najvišjo skupno vrednost kazalnika, kar jo uvršča na prvo mesto.
 
 Razloge za njen vodilni položaj najlažje pojasnimo z interpretacijo spodnjega grafa. Iz njega je razvidno, da ima Norveška sicer nekoliko nižji Ladder score v primerjavi s povprečjem desetih najbolje uvrščenih držav, vendar izrazito izstopa pri drugih kazalnikih. Dosega zelo visoko stopnjo svobode (z-vrednost približno 2,2, kar jo uvršča med približno 1 % najboljših držav), hkrati pa izkazuje tudi višjo raven radodarnosti ter nižjo zaznano stopnjo korupcije. Kombinacija teh dejavnikov, skupaj z nadpovprečnim BDP na prebivalca glede na povprečje najboljših držav, vodi do tega, da Norveška zasede prvo mesto.
-
+<br><br>
 <img src="https://github.com/user-attachments/assets/ab3298fb-f17d-4232-bd69-dd93e4cc29da" width="90%" />
-
+<br><br>
 Na vprašanje o rasti in upadanju kakovosti življenja lahko odgovorimo na podlagi spodnjega grafa, ki prikazuje neto spremembo kakovosti življenja evropskih držav v obdobju 2014–2025. Iz grafa je razvidno, da sta največjo relativno rast dosegli Ukrajina in Rusija, medtem ko so najmanjše spremembe zabeležile Švica, Nemčija, Finska in Danska.
 
 Pri interpretaciji teh rezultatov je treba upoštevati, da relativna rast ne odraža nujno dejanske ravni kakovosti življenja. Države z že visoko začetno vrednostjo težje dosegajo velike spremembe kot države z nižjim izhodiščem. Zato je za celovitejšo razumevanje smiselno upoštevati tudi absolutne vrednosti in dodatne vizualizacije, kot so fasetni grafi (prikazani v poglavju Ovrednotenje podatkov), ki omogočajo bolj uravnoteženo primerjavo.
 
-
+<br><br>
 <img src="https://github.com/user-attachments/assets/9c8bd7d9-d93f-4cd0-9675-e4f88be4d1cb" width="90%" />
-
+<br><br>
 
 Na zadnje vprašanje lahko najlažje odgovorimo s pomočjo korelacijske matrike. Ta razkriva, kateri dejavniki so najmočneje povezani s kakovostjo življenja. Opazimo, da ima kakovost življenja najvišjo pozitivno korelacijo z zadovoljstvom z življenjem ter kupno močjo, kar nakazuje, da sta za posameznike ključnega pomena predvsem finančna varnost in splošno zadovoljstvo z življenjem.
 
 Prav tako je razvidno, da ima indeks onesnaževanja izrazit negativen vpliv, kar pomeni, da ljudje visoko vrednotijo čisto in zdravo okolje. Pomembno vlogo ima tudi kakovost zdravstvenega sistema, saj ta neposredno vpliva na daljšo pričakovano življenjsko dobo in višjo kakovost vsakdanjega življenja.
-
+<br><br>
 <img src="https://github.com/user-attachments/assets/12f92fba-c693-4d37-b497-fabb8701c319" width="75%" />
-
+<br><br>
 ## Zaključek in povezave do kode ter podrobnejšega opisa postopkov
 
 Zaradi omejitve obsega (900 besed) v poročilo nismo vključili izvorne kode in podrobnejših opisov postopkov. Ti so na voljo v preostalih dveh vejah repozitorija: podrobnosti za prvi dve raziskovalni vprašanji se nahajajo v veji [J_PR_Projekt](https://github.com/VKFRIGH/PR2602/blob/J_PR_Projekt/projektJ.ipynb), analize za preostala tri vprašanja pa v veji [B+K_PR_Projekt](https://github.com/VKFRIGH/PR2602/blob/B%2BK_PR_Projekt/projektB%2BK.ipynb).
