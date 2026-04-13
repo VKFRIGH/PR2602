@@ -47,7 +47,7 @@ Razlog za njen vodilni položaj je najlažje pojasniti z interpretacijo spodnjeg
 
 <img width="800" height="558" alt="image" src="https://github.com/user-attachments/assets/ab3298fb-f17d-4232-bd69-dd93e4cc29da" />
 
-Na vprašanje o rasti in padanju kakovosti življenja lahko odgovorimo na podlagi spodnjega grafa, ki prikazuje neto spremembo kakovosti življenja evropskih držav. Iz njega je razvidno, da sta največjo rast dosegli Ukrajina in Rusija, medtem ko so najmanjšo rast zabeležile Švica, Nemčija, Finska in Danska, ki jih sicer običajno dojemamo kot bolj razvite države. Vendar pa je ta graf lahko zavajajoč, saj sama rast ne odraža nujno dejanske kakovosti življenja. Povečanje iz 90 na 100 je bistveno težje doseči kot rast iz 0 na 50, zato je za bolj realno sliko smiselno upoštevati tudi fasetne grafe (slika v poglavju ovrednotenje podatkov), ki omogočajo celovitejšo primerjavo.
+Na vprašanje o rasti in padanju kakovosti življenja lahko odgovorimo na podlagi spodnjega grafa, ki prikazuje neto spremembo kakovosti življenja evropskih držav(2014-2025). Iz njega je razvidno, da sta največjo rast dosegli Ukrajina in Rusija, medtem ko so najmanjšo rast zabeležile Švica, Nemčija, Finska in Danska, ki jih sicer običajno dojemamo kot bolj razvite države. Vendar pa je ta graf lahko zavajajoč, saj sama rast ne odraža nujno dejanske kakovosti življenja. Povečanje iz 90 na 100 je bistveno težje doseči kot rast iz 0 na 50, zato je za bolj realno sliko smiselno upoštevati tudi fasetne grafe (slika v poglavju ovrednotenje podatkov), ki omogočajo celovitejšo primerjavo.
 
 
 <img width="700" height="700" alt="image" src="https://github.com/user-attachments/assets/9c8bd7d9-d93f-4cd0-9675-e4f88be4d1cb" />
