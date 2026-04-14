@@ -21,7 +21,7 @@ Podatke smo pridobili iz štirih virov:
 - [World Happiness Report](https://www.worldhappiness.report/data-sharing/ )
 - [UNDP Human Development Index](https://hdr.undp.org/data-center/human-development-index#/indicies/HDI)
 - [World Bank DataBank (World Development Indicators)](https://datacatalog.worldbank.org/search/dataset/0037712/world-development-indicators)
-- [Numbeo Quality of Life Index](https://www.kaggle.com/datasets/marcelobatalhah/quality-of-life-index-by-country/data)
+- [Numbeo Quality of Life Index](https://www.numbeo.com/quality-of-life/rankings_by_country.jsp)
 
 Te smo izbrali, ker so poleg ustreznosti za našo temo tudi dovolj obsežni in relevantni. Pri prvih dveh vprašanjih, enako kot pri preostalih treh, smo podatke združili v dve ločeni tabeli. V prvi tabeli ima vsaka država eno vrstico, stolpci pa predstavljajo posamezne atribute za leto 2023. Pri preostalih vprašanjih pa je tabela strukturirana tako, da ima vsaka država za vsako leto svojo vrstico, stolpci pa predstavljajo posamezne značilnosti države. 
 
