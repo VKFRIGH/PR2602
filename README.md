@@ -29,6 +29,16 @@ da lahko pred naslednjim srečanjem stvari pregledam.
 Najbolje bi bilo, da oddate že prej, da lahko dodam pripombe in povem, če je kaj treba spremeniti.
 
 ---
+## 2. DEL (rok: 25. 5. 2026)
+
+V drugem delu treba še odgovoriti na zadnje vprašanje ter popraviti napake iz prejšnih(barve). 
+
+Glavna stvar pa je narediti aplikacijo
+v obliki streamlit, v kateri rabimo implementirati interaktivni vpogled v podatke-glavne ugotovitve saj ta predsatvlja 20% ocene seminarske izberite si en ozirama dva grafa in jih 
+naredite interaktivna kot smo govorili na faksu oddajte mi jo najkasneje do 25.5.2026 če imate vprašanja pišite na discord.
+
+---
+
 
 ## Google Drive
 
