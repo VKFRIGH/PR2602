@@ -24,7 +24,7 @@ def _build_data():
     df_hdi['iso_code'] = cc.convert(names=df_hdi['Country'], to='ISO3')
 
     # WDI — 78 MB Excel, slow first load; result is cached to parquet
-    df_wb = pd.read_excel('app/data/WDIEXCEL.xlsx')
+    df_wb = pd.read_excel('data/WDIEXCEL.xlsx')
     df_wb.rename(columns={'Country Code': 'iso_code'}, inplace=True)
     needed_indicators = {
         'GDP per capita, PPP (current international $)',
