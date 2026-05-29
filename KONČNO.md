@@ -99,7 +99,7 @@ Z linearno regresijo  pa lahko napovemo da bo po naših napovedih večino držav
 <img width="1989" height="2395" alt="image" src="https://github.com/user-attachments/assets/8c37efc4-e0f7-473b-8ef6-f0d95e4ae7ad" width="75%"/>
 <br><br>
 ## Aplikacija streamlit
-Naredili smo tudi aplikacijo ki omogoča interaktiven vpogled v podatke. Vsebuje opcijo za zemljevid kjer lahko paogledamo borda_count celega sveta ali pa pogledamo vrednosti posameznih atributov druga opcija pa nam omogoča primerjavo posameznih držav po izbranih atributih. Aplikacija se nahaja pod Releases kjer so tudi navodila za zagon aplikacija pa je tudi objavljena na link.
+Naredili smo tudi aplikacijo ki omogoča interaktiven vpogled v podatke. Vsebuje opcijo za zemljevid kjer lahko paogledamo borda_count celega sveta ali pa pogledamo vrednosti posameznih atributov druga opcija pa nam omogoča primerjavo posameznih držav po izbranih atributih. Aplikacija se nahaja pod Releases kjer so tudi navodila za zagon aplikacija pa je tudi objavljena na [link](https://pr2602-dyglvptx874uybcsu7rwgx.streamlit.app/).
 
 ## Zaključek in povezave do kode ter podrobnejšega opisa postopkov
 
