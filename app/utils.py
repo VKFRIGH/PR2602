@@ -13,10 +13,10 @@ def _build_data():
     import country_converter as coco
     cc = coco.CountryConverter()
 
-    df_happiness = pd.read_excel('data/WHR23_Data_Figure_2.1.xls')
+    df_happiness = pd.read_excel('app/data/WHR23_Data_Figure_2.1.xls')
     df_happiness['iso_code'] = cc.convert(names=df_happiness['Country name'], to='ISO3')
 
-    df_hdi = pd.read_excel('data/HDR25_Statistical_Annex_HDI_Table.xlsx', header=4)
+    df_hdi = pd.read_excel('app/data/HDR25_Statistical_Annex_HDI_Table.xlsx', header=4)
     df_hdi.columns.values[0] = 'HDI rank'
     df_hdi.columns.values[1] = 'Country'
     df_hdi.drop(df_hdi.columns[[3, 5, 7, 9, 11, 13]], axis=1, inplace=True)
@@ -24,7 +24,7 @@ def _build_data():
     df_hdi['iso_code'] = cc.convert(names=df_hdi['Country'], to='ISO3')
 
     # WDI — 78 MB Excel, slow first load; result is cached to parquet
-    df_wb = pd.read_excel('data/WDIEXCEL.xlsx')
+    df_wb = pd.read_excel('app/data/WDIEXCEL.xlsx')
     df_wb.rename(columns={'Country Code': 'iso_code'}, inplace=True)
     needed_indicators = {
         'GDP per capita, PPP (current international $)',
