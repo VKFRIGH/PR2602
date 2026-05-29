@@ -103,7 +103,7 @@ Naredili smo tudi aplikacijo ki omogoča interaktiven vpogled v podatke. Vsebuje
 
 ## Zaključek in povezave do kode ter podrobnejšega opisa postopkov
 
-Zaradi omejitve obsega (1300 besed) v poročilo nismo vključili izvorne kode in podrobnejših opisov postopkov. Ti so na voljo v preostalih dveh vejah repozitorija: podrobnosti za prvi dve raziskovalni vprašanji se nahajajo v veji [J_PR_Projekt](https://github.com/VKFRIGH/PR2602/blob/J_PR_Projekt/projektJ.ipynb), analize za preostala tri vprašanja pa v veji [B+K_PR_Projekt](https://github.com/VKFRIGH/PR2602/blob/B%2BK_PR_Projekt/projektB%2BK.ipynb).
+Zaradi omejitve obsega (1300 besed) v poročilo nismo vključili izvorne kode in podrobnejših opisov postopkov. Ti so na voljo v preostalih dveh vejah repozitorija: podrobnosti za prvi dve raziskovalni vprašanji se nahajajo v veji [J_PR_Projekt](https://github.com/VKFRIGH/PR2602/blob/J_PR_Projekt/projektJ.ipynb), analize za preostala štiri vprašanja pa v veji [B+K_PR_Projekt](https://github.com/VKFRIGH/PR2602/blob/B%2BK_PR_Projekt/projektB%2BK.ipynb).
 
 
 
