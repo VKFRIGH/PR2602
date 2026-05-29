@@ -1,0 +1,10 @@
+.ipynb_checkpoints/
+__pycache__/
+
+# large raw source files — not needed online
+data/WDIEXCEL.xlsx
+
+# keep these (small files the app needs)
+# data/WHR23_Data_Figure_2.1.xls
+# data/HDR25_Statistical_Annex_HDI_Table.xlsx
+# data/processed_final.parquet
