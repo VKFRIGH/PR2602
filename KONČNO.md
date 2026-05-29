@@ -61,10 +61,9 @@ Za bolj celovito analizo smo zato uporabili fasetne grafe, ki omogočajo neposre
 <img src="https://github.com/user-attachments/assets/6b9aef99-e24f-4674-928d-00e2520c3964" width="90%" />
 <br><br>
 
-Poleg tega smo uporabili tudi korelacijsko matriko, ki omogoča analizo povezav med posameznimi spremenljivkami ter njihovega vpliva na kakovost življenja.
+Uporabili smo tudi korelacijsko matriko, ki omogoča analizo povezav med posameznimi spremenljivkami ter njihovega vpliva na kakovost življenja.
 
-Za napovedovanje prihodnjih vrednosti kakovosti življenja smo uporabili linearno regresijo po posameznih državah. Podatke smo omejili na obdobje po letu 2017, saj se je pred tem spremenila metodologija izračuna indeksa kakovosti življenja. Za vsako državo smo ustvarili ločen regresijski model, kjer je leto predstavljalo neodvisno spremenljivko, indeks kakovosti življenja pa odvisno spremenljivko.Uspešnost modela smo ocenjevali s koeficientom determinacije R
-2
+Za napovedovanje prihodnjih vrednosti kakovosti življenja smo uporabili linearno regresijo po posameznih državah. Podatke smo omejili na obdobje po letu 2017, saj se je pred tem spremenila metodologija izračuna indeksa kakovosti življenja. Za vsako državo smo ustvarili ločen regresijski model, kjer je leto predstavljalo neodvisno spremenljivko, indeks kakovosti življenja pa odvisno spremenljivko.Uspešnost modela smo ocenjevali s koeficientom determinacije R^2
 , ki meri, kako dobro model opisuje gibanje podatkov skozi čas. Višje vrednosti pomenijo bolj zanesljivo napoved.
 
 Poleg same napovedne premice smo izračunali tudi interval negotovosti. Ta temelji na standardnem odklonu residualov oziroma napak modela. Ker negotovost napovedi s časom narašča, smo interval zaupanja za prihodnja leta postopoma širili. Na grafih:
@@ -100,7 +99,7 @@ Z linearno regresijo  pa lahko napovemo da bo po naših napovedih večino držav
 <img width="1989" height="2395" alt="image" src="https://github.com/user-attachments/assets/8c37efc4-e0f7-473b-8ef6-f0d95e4ae7ad" width="75%"/>
 <br><br>
 ## Aplikacija streamlit
-Naredili smo tudi aplikacijo ki omogoča interaktiven vpogled v podatke. Vsebuje opcijo za zemljevid kjer lahko paogledamo borda_count celega sveta ali pa pogledamo vrednosti posameznih atributov druga opcija pa nam omogoča primerjavo posameznih držav po izbranih atributih. Aplikacija se nahaja pod Releases kjer so tudi navodila za zagon.
+Naredili smo tudi aplikacijo ki omogoča interaktiven vpogled v podatke. Vsebuje opcijo za zemljevid kjer lahko paogledamo borda_count celega sveta ali pa pogledamo vrednosti posameznih atributov druga opcija pa nam omogoča primerjavo posameznih držav po izbranih atributih. Aplikacija se nahaja pod Releases kjer so tudi navodila za zagon aplikacija pa je tudi objavljena na link.
 
 ## Zaključek in povezave do kode ter podrobnejšega opisa postopkov
 
