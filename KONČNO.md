@@ -9,9 +9,10 @@ Pri našem projektu smo se odločili raziskati kakovost življenja po svetu. V s
 2. Zakaj ima najboljšo kakovost življenja?
 3. Katere države beležijo rast kakovosti in zakaj? 
 4. Kateri faktorji vplivajo na kakovost življenja? 
-5. Pri katerih državah kakovost pada in zakaj? 
+5. Pri katerih državah kakovost pada in zakaj?
+6. Kaj bi lahko napovedovali za prihodnja leta?
 
-Poleg naštetega, nas tudi zanima, kaj bi lahko napovedovali za prihodnja leta. Na večino teh vprašanj smo tekom raziskave že uspešno odgovorili, medtem ko zadnje vprašanje še vedno obdelujemo, saj je nekoliko zahtevnejše od ostalih.
+Poleg vprašanj pa smo ustvarili tudi streamlit, ki omogoča interaktiven vpogled v najpomembnejše podatke;
 
 ## Podatki in njihova priprava
 
@@ -62,6 +63,12 @@ Za bolj celovito analizo smo zato uporabili fasetne grafe, ki omogočajo neposre
 
 Poleg tega smo uporabili tudi korelacijsko matriko, ki omogoča analizo povezav med posameznimi spremenljivkami ter njihovega vpliva na kakovost življenja.
 
+Za napovedovanje prihodnjih vrednosti kakovosti življenja smo uporabili linearno regresijo po posameznih državah. Podatke smo omejili na obdobje po letu 2017, saj se je pred tem spremenila metodologija izračuna indeksa kakovosti življenja. Za vsako državo smo ustvarili ločen regresijski model, kjer je leto predstavljalo neodvisno spremenljivko, indeks kakovosti življenja pa odvisno spremenljivko.Uspešnost modela smo ocenjevali s koeficientom determinacije R
+2
+, ki meri, kako dobro model opisuje gibanje podatkov skozi čas. Višje vrednosti pomenijo bolj zanesljivo napoved.
+
+Poleg same napovedne premice smo izračunali tudi interval negotovosti. Ta temelji na standardnem odklonu residualov oziroma napak modela. Ker negotovost napovedi s časom narašča, smo interval zaupanja za prihodnja leta postopoma širili. Na grafih:
+
 ## Ugotovitve
 
 Na vprašanje, katera država ima najvišjo kakovost življenja, lahko na podlagi naših izračunov odgovorimo, da je to Norveška, saj dosega najvišjo skupno vrednost kazalnika, kar jo uvršča na prvo mesto.
@@ -74,6 +81,8 @@ Na vprašanje o rasti in upadanju kakovosti življenja lahko odgovorimo na podla
 
 Pri interpretaciji teh rezultatov je treba upoštevati, da relativna rast ne odraža nujno dejanske ravni kakovosti življenja. Države z že visoko začetno vrednostjo težje dosegajo velike spremembe kot države z nižjim izhodiščem. Zato je za celovitejšo razumevanje smiselno upoštevati tudi absolutne vrednosti in dodatne vizualizacije, kot so fasetni grafi (prikazani v poglavju Ovrednotenje podatkov), ki omogočajo bolj uravnoteženo primerjavo.
 
+Poleg same napovedne premice smo izračunali tudi interval negotovosti. Ta temelji na standardnem odklonu residualov oziroma napak modela. Ker negotovost napovedi s časom narašča, smo interval zaupanja za prihodnja leta postopoma širili. Na grafih:
+
 <br><br>
 <img src="https://github.com/user-attachments/assets/9c8bd7d9-d93f-4cd0-9675-e4f88be4d1cb" width="90%" />
 <br><br>
@@ -81,12 +90,19 @@ Pri interpretaciji teh rezultatov je treba upoštevati, da relativna rast ne odr
 Na zadnje vprašanje lahko najlažje odgovorimo s pomočjo korelacijske matrike. Ta razkriva, kateri dejavniki so najmočneje povezani s kakovostjo življenja. Opazimo, da ima kakovost življenja najvišjo pozitivno korelacijo z zadovoljstvom z življenjem ter kupno močjo, kar nakazuje, da sta za posameznike ključnega pomena predvsem finančna varnost in splošno zadovoljstvo z življenjem.
 
 Prav tako je razvidno, da ima indeks onesnaževanja izrazit negativen vpliv, kar pomeni, da ljudje visoko vrednotijo čisto in zdravo okolje. Pomembno vlogo ima tudi kakovost zdravstvenega sistema, saj ta neposredno vpliva na daljšo pričakovano življenjsko dobo in višjo kakovost vsakdanjega življenja.
+
 <br><br>
 <img src="https://github.com/user-attachments/assets/12f92fba-c693-4d37-b497-fabb8701c319" width="75%" />
 <br><br>
+
+Z linearno regresijo  pa lahko napovemo da bo po naših napovedih večino držav imelo rast kakovosti življenja z izjemo Grčije in Belorusije kjer kakovost življenja počasi pada. Iz grafa je vidno, da ima najmanjši interval negotovosti Albanija takoj pa ji sledijo Malta, Luksenburg, Latvija in litva  to pomeni da so v preteklosti te države imel zelo linearno rast in se to pričakuje tudi v prihodnosti. Velik interval negotovosti pa imajo države pri katerih kakovost zelo niha na grafu še posebaj iztopajo države kot so Srbija ter Bosna in Hercegovina.
+<br><br>
+<img width="1989" height="2395" alt="image" src="https://github.com/user-attachments/assets/8c37efc4-e0f7-473b-8ef6-f0d95e4ae7ad" width="75%"/>
+<br><br>
+## Aplikacija streamlit
 ## Zaključek in povezave do kode ter podrobnejšega opisa postopkov
 
-Zaradi omejitve obsega (900 besed) v poročilo nismo vključili izvorne kode in podrobnejših opisov postopkov. Ti so na voljo v preostalih dveh vejah repozitorija: podrobnosti za prvi dve raziskovalni vprašanji se nahajajo v veji [J_PR_Projekt](https://github.com/VKFRIGH/PR2602/blob/J_PR_Projekt/projektJ.ipynb), analize za preostala tri vprašanja pa v veji [B+K_PR_Projekt](https://github.com/VKFRIGH/PR2602/blob/B%2BK_PR_Projekt/projektB%2BK.ipynb).
+Zaradi omejitve obsega (1300 besed) v poročilo nismo vključili izvorne kode in podrobnejših opisov postopkov. Ti so na voljo v preostalih dveh vejah repozitorija: podrobnosti za prvi dve raziskovalni vprašanji se nahajajo v veji [J_PR_Projekt](https://github.com/VKFRIGH/PR2602/blob/J_PR_Projekt/projektJ.ipynb), analize za preostala tri vprašanja pa v veji [B+K_PR_Projekt](https://github.com/VKFRIGH/PR2602/blob/B%2BK_PR_Projekt/projektB%2BK.ipynb).
 
-V prihodnje nameravamo raziskavo nadgraditi z analizo prihodnjih trendov kakovosti življenja ter z implementacijo interaktivnega vpogleda v podatke in ključne ugotovitve.
+
 
