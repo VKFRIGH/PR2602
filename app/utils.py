@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 import os
 import streamlit as st
+import country_converter as coco
 
 import warnings
 warnings.filterwarnings('ignore')
@@ -10,7 +11,7 @@ _CACHE_PATH = 'app/data/processed_final.parquet'
 
 
 def _build_data():
-    import country_converter as coco
+    
     cc = coco.CountryConverter()
 
     df_happiness = pd.read_excel('app/data/WHR23_Data_Figure_2.1.xls')
@@ -74,16 +75,7 @@ def _build_data():
     df_final.to_parquet(_CACHE_PATH, index=False)
     return df_final
 
-
-@st.cache_data
-def load_data():
-    if os.path.exists(_CACHE_PATH):
-        return pd.read_parquet(_CACHE_PATH)
-    return _build_data()
-
-@st.cache_data
-def load_data_BK():
-    import country_converter as coco
+def _build_data_BK():
     cc = coco.CountryConverter()
     #majhne datoteke, ni potrebe po parquetu
     df_qol = pd.read_csv('app/data/quality_of_life_indices_by_country.csv')
@@ -96,7 +88,18 @@ def load_data_BK():
     df_qol['Quality of Life Index'] = pd.to_numeric(df_qol['Quality of Life Index'], errors='coerce')
     df_qol = df_qol.dropna(subset=['Year', 'Quality of Life Index']).copy()
     df_qol['Year'] = df_qol['Year'].astype(int)
-    return df_qol, df_analysis
+    return (df_qol, df_analysis)
+
+
+@st.cache_data
+def load_data():
+    if os.path.exists(_CACHE_PATH):
+        return pd.read_parquet(_CACHE_PATH)
+    return _build_data()
+
+@st.cache_data
+def load_data_BK():
+    return _build_data_BK()
 
         
 
