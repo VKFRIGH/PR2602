@@ -81,6 +81,22 @@ def load_data():
         return pd.read_parquet(_CACHE_PATH)
     return _build_data()
 
+@st.cache_data
+def load_data_BK():
+    #majhne datoteke, ni potrebe po parquetu
+    df_qol = pd.read_csv('app/data/quality_of_life_indices_by_country.csv')
+    df_analysis = pd.read_csv('app/data/growth_analysis.csv')
+    # Coerce Year to a four-digit integer (e.g. '2014/2' -> 2014) and ensure numeric QoL
+    df_qol['Year'] = df_qol['Year'].astype(str).str.extract(r'(\d{4})')[0]
+    df_qol['Year'] = pd.to_numeric(df_qol['Year'], errors='coerce')
+    df_qol = df_qol.groupby(['Country Name', 'Year'], as_index=False, sort=False).mean(numeric_only=True)
+    df_qol['Quality of Life Index'] = pd.to_numeric(df_qol['Quality of Life Index'], errors='coerce')
+    df_qol = df_qol.dropna(subset=['Year', 'Quality of Life Index']).copy()
+    df_qol['Year'] = df_qol['Year'].astype(int)
+    return df_qol, df_analysis
+
+        
+
 
 NUMERIC_COLS = [
     'Ladder score',
@@ -127,3 +143,4 @@ def borda_count(df, cols):
     df_b['Borda score'] = df_b[rank_cols].sum(axis=1)
     df_b = df_b.drop(columns=rank_cols)
     return df_b.sort_values('Borda score', ascending=False).reset_index(drop=True)
+
