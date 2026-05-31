@@ -83,9 +83,12 @@ def load_data():
 
 @st.cache_data
 def load_data_BK():
+    import country_converter as coco
+    cc = coco.CountryConverter()
     #majhne datoteke, ni potrebe po parquetu
     df_qol = pd.read_csv('app/data/quality_of_life_indices_by_country.csv')
     df_analysis = pd.read_csv('app/data/growth_analysis.csv')
+    df_analysis['iso_code'] = cc.convert(names=df_analysis['Country Name'], to='ISO3')
     # Coerce Year to a four-digit integer (e.g. '2014/2' -> 2014) and ensure numeric QoL
     df_qol['Year'] = df_qol['Year'].astype(str).str.extract(r'(\d{4})')[0]
     df_qol['Year'] = pd.to_numeric(df_qol['Year'], errors='coerce')
