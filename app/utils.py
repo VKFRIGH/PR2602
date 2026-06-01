@@ -2,21 +2,22 @@ import pandas as pd
 import numpy as np
 import os
 import streamlit as st
+import country_converter as coco
 
 import warnings
 warnings.filterwarnings('ignore')
 
-_CACHE_PATH = 'data/processed_final.parquet'
+_CACHE_PATH = 'app/data/processed_final.parquet'
 
 
 def _build_data():
-    import country_converter as coco
+    
     cc = coco.CountryConverter()
 
-    df_happiness = pd.read_excel('data/WHR23_Data_Figure_2.1.xls')
+    df_happiness = pd.read_excel('app/data/WHR23_Data_Figure_2.1.xls')
     df_happiness['iso_code'] = cc.convert(names=df_happiness['Country name'], to='ISO3')
 
-    df_hdi = pd.read_excel('data/HDR25_Statistical_Annex_HDI_Table.xlsx', header=4)
+    df_hdi = pd.read_excel('app/data/HDR25_Statistical_Annex_HDI_Table.xlsx', header=4)
     df_hdi.columns.values[0] = 'HDI rank'
     df_hdi.columns.values[1] = 'Country'
     df_hdi.drop(df_hdi.columns[[3, 5, 7, 9, 11, 13]], axis=1, inplace=True)
@@ -24,7 +25,7 @@ def _build_data():
     df_hdi['iso_code'] = cc.convert(names=df_hdi['Country'], to='ISO3')
 
     # WDI — 78 MB Excel, slow first load; result is cached to parquet
-    df_wb = pd.read_excel('data/WDIEXCEL.xlsx')
+    df_wb = pd.read_excel('app/data/WDIEXCEL.xlsx')
     df_wb.rename(columns={'Country Code': 'iso_code'}, inplace=True)
     needed_indicators = {
         'GDP per capita, PPP (current international $)',
@@ -74,12 +75,33 @@ def _build_data():
     df_final.to_parquet(_CACHE_PATH, index=False)
     return df_final
 
+def _build_data_BK():
+    cc = coco.CountryConverter()
+    #majhne datoteke, ni potrebe po parquetu
+    df_qol = pd.read_csv('app/data/quality_of_life_indices_by_country.csv')
+    df_analysis = pd.read_csv('app/data/growth_analysis.csv')
+    df_analysis['iso_code'] = cc.convert(names=df_analysis['Country Name'], to='ISO3')
+    # Coerce Year to a four-digit integer (e.g. '2014/2' -> 2014) and ensure numeric QoL
+    df_qol['Year'] = df_qol['Year'].astype(str).str.extract(r'(\d{4})')[0]
+    df_qol['Year'] = pd.to_numeric(df_qol['Year'], errors='coerce')
+    df_qol = df_qol.groupby(['Country Name', 'Year'], as_index=False, sort=False).mean(numeric_only=True)
+    df_qol['Quality of Life Index'] = pd.to_numeric(df_qol['Quality of Life Index'], errors='coerce')
+    df_qol = df_qol.dropna(subset=['Year', 'Quality of Life Index']).copy()
+    df_qol['Year'] = df_qol['Year'].astype(int)
+    return (df_qol, df_analysis)
+
 
 @st.cache_data
 def load_data():
     if os.path.exists(_CACHE_PATH):
         return pd.read_parquet(_CACHE_PATH)
     return _build_data()
+
+@st.cache_data
+def load_data_BK():
+    return _build_data_BK()
+
+        
 
 
 NUMERIC_COLS = [
@@ -127,3 +149,4 @@ def borda_count(df, cols):
     df_b['Borda score'] = df_b[rank_cols].sum(axis=1)
     df_b = df_b.drop(columns=rank_cols)
     return df_b.sort_values('Borda score', ascending=False).reset_index(drop=True)
+
