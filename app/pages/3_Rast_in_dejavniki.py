@@ -14,12 +14,6 @@ st.title("📊 Rast kvalitete življenja in dejavniki")
 tab1, tab3 = st.tabs(["Neto rast", "Faktorji vpliva"])
 
 with tab1:
-    st.markdown(
-        """
-        Ta stran raziskuje, kateri dejavniki so najmočneje povezani z neto rastjo kakovosti življenja
-        v stabilnem obdobju 2017-2026. Primerjamo korelacije in strukturne razlike med skupinami.
-        """
-    )
     tab1_1, tab1_2 = st.tabs(["📊 Bar chart", "🗺️ Zemljevid"])
 
     with tab1_1:
@@ -77,6 +71,13 @@ with tab1:
 
 with tab3:
     correlation_with_growth, corr, analysis_df = calculate_correlations(df_qol, df_growth)
+
+    st.markdown(
+        """
+        Ta stran raziskuje, kateri dejavniki so najmočneje povezani z neto rastjo kakovosti življenja
+        v stabilnem obdobju 2017-2026. Primerjamo korelacije in strukturne razlike med skupinami.
+        """
+    )
 
     tab_corr1, tab_corr2 = st.tabs(['Urejena korelacija', 'Korelacijska matrika'])
 
