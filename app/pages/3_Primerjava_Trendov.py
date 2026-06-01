@@ -11,7 +11,16 @@ st.set_page_config(page_title="Primerjava Trendov", page_icon="📈", layout="wi
 
 st.title("📈 Primerjava Trendov")
 st.markdown("""
-Primerjaj rast kvalitete življenja med državami.
+Na tej strani lahko primerjaš gibanje **indeksa kakovosti življenja (Quality of Life Index)** med evropskimi državami v obdobju **2017–2026**.
+
+- Izberi eno ali več držav in primerjaj njihove časovne trende.
+- Po želji vključi **trendne črte**, ki prikazujejo splošno smer razvoja skozi opazovano obdobje.
+- Na zemljevidu spodaj so države razvrščene glede na rast kakovosti življenja:
+  - 🟢 **Visoka rast**
+  - 🔵 **Zmerna rast**
+  - 🔴 **Stagnacija**
+
+Analiza omogoča hitro prepoznavanje držav z najhitrejšim izboljšanjem kakovosti življenja ter primerjavo dolgoročnih trendov med posameznimi državami.
 """)
 
 df_qol, df_analysis = load_data_BK()
