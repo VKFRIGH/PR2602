@@ -102,9 +102,7 @@ def load_data_BK():
     return _build_data_BK()
 
 @st.cache_data
-def calculate_correlations():
-    df_qol, df_growth = load_data_BK()
-
+def calculate_correlations(df_qol, df_growth):
     factors = [
     'Purchasing Power Index',
     'Safety Index',

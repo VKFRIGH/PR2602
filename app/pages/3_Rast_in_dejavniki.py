@@ -76,7 +76,7 @@ with tab1:
         st.plotly_chart(fig, use_container_width=True)
 
 with tab3:
-    correlation_with_growth, corr, analysis_df = calculate_correlations()
+    correlation_with_growth, corr, analysis_df = calculate_correlations(df_qol, df_growth)
 
     tab_corr1, tab_corr2 = st.tabs(['Urejena korelacija', 'Korelacijska matrika'])
 
