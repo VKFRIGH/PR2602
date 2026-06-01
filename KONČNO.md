@@ -98,8 +98,17 @@ Z linearno regresijo  pa lahko napovemo da bo po naših napovedih večino držav
 <br><br>
 <img width="1989" height="2395" alt="image" src="https://github.com/user-attachments/assets/8c37efc4-e0f7-473b-8ef6-f0d95e4ae7ad" width="75%"/>
 <br><br>
+
 ## Aplikacija streamlit
-Naredili smo tudi aplikacijo ki omogoča interaktiven vpogled v podatke. Vsebuje opcijo za zemljevid kjer lahko paogledamo borda_count celega sveta ali pa pogledamo vrednosti posameznih atributov druga opcija pa nam omogoča primerjavo posameznih držav po izbranih atributih. Zadnja opcija je primerjava trendov kjer si lahko izberom države in primerjamo njihove trende med sabo. Aplikacija pa je tudi objavljena na [stramlit](https://pr2602-dyglvptx874uybcsu7rwgx.streamlit.app/) njena koda se pa nahaja na [koda](https://github.com/VKFRIGH/PR2602/tree/main/app).
+
+Naredili smo aplikacijo, ki omogoča interaktiven vpogled v podatke. Ponuja štiri glavne poglede:
+
+- zemljevid, kjer lahko pogledamo Borda count za cel svet ali vrednosti posameznih atributov.
+- primerjavo, ki omogoča primerjavo izbranih držav po poljubnih atributih.
+- neto rast in dejavniki, ki prikazuje neto rast in vplive na neto rast kakovosti življenja.
+- primerjava trendov, ki omogoča primerjavo preteklih podatkov in napovedanih trendov med izbranimi državami.
+
+Aplikacija je objavljena na Streamlit: https://pr2602-dyglvptx874uybcsu7rwgx.streamlit.app/; izvorna koda je na GitHubu: https://github.com/VKFRIGH/PR2602/tree/main/app.
 <img width="940" height="429" alt="image" src="https://github.com/user-attachments/assets/72915873-2d36-4e99-835b-60966e100ea8" width="75%" />
 
 ## Zaključek in povezave do kode ter podrobnejšega opisa postopkov
