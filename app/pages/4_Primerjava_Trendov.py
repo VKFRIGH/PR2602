@@ -14,7 +14,7 @@ st.markdown("""
 Na tej strani lahko primerjaš gibanje **indeksa kakovosti življenja (Quality of Life Index)** med evropskimi državami v obdobju **2017–2026**.
 
 - Izberi eno ali več držav in primerjaj njihove časovne trende.
-- Po želji vključi **trendne črte**, ki prikazujejo splošno smer razvoja skozi opazovano obdobje.
+- Po želji vključi **trendne črte** in **intervale zaupanja**, ki prikazujejo splošno smer razvoja skozi opazovano obdobje.
 - Na zemljevidu spodaj so države razvrščene glede na rast kakovosti življenja:
   - 🟢 **Visoka rast**
   - 🔵 **Zmerna rast**
@@ -31,13 +31,14 @@ all_countries = sorted(df_qol['Country Name'].unique().tolist())
 with st.sidebar:
     st.header("Nastavitve")
 
-    trend_crte = st.toggle("Prikaži trendne črte", value=True)
-    show_ci = st.toggle("Prikaži interval zaupanja", value=True)
+    trend_crte = st.toggle("Prikaži trendne črte in napoved", value=True)
 
     if trend_crte:
         predict = st.slider(f"Napoved do leta",2026,2030,2026)
+        show_ci = st.toggle("Prikaži interval zaupanja napovedi", value=True)
     else:
         predict = None
+        show_ci = False
 
     
     selected_countries = st.multiselect(
