@@ -12,7 +12,7 @@ Pri našem projektu smo se odločili raziskati kakovost življenja po svetu. V s
 5. Pri katerih državah kakovost pada in zakaj?
 6. Kaj bi lahko napovedovali za prihodnja leta?
 
-Poleg vprašanj pa smo ustvarili tudi streamlit, ki omogoča interaktiven vpogled v najpomembnejše podatke;
+Poleg vprašanj pa smo ustvarili tudi streamlit, ki omogoča interaktiven vpogled v najpomembnejše podatke.
 
 ## Podatki in njihova priprava
 
@@ -70,7 +70,7 @@ Poleg same napovedne premice smo izračunali tudi interval negotovosti. Ta temel
 
 ## Ugotovitve
 
-Na vprašanje, katera država ima najvišjo kakovost življenja, lahko na podlagi naših izračunov odgovorimo, da je to Norveška, saj dosega najvišjo skupno vrednost kazalnika, kar jo uvršča na prvo mesto.
+Izračuni kažejo, da je odgovor na vprašanje, katera država ima najvišjo kakovost življenja, Norveška, saj dosega najvišjo skupno vrednost kazalnika in se zato uvršča na prvo mesto
 
 Razloge za njen vodilni položaj najlažje pojasnimo z interpretacijo spodnjega grafa. Iz njega je razvidno, da ima Norveška sicer nekoliko nižji Ladder score v primerjavi s povprečjem desetih najbolje uvrščenih držav, vendar izrazito izstopa pri drugih kazalnikih. Dosega zelo visoko stopnjo svobode (z-vrednost približno 2,2, kar jo uvršča med približno 1 % najboljših držav), hkrati pa izkazuje tudi višjo raven radodarnosti ter nižjo zaznano stopnjo korupcije. Kombinacija teh dejavnikov, skupaj z nadpovprečnim BDP na prebivalca glede na povprečje najboljših držav, vodi do tega, da Norveška zasede prvo mesto.
 <br><br>
@@ -86,7 +86,7 @@ Poleg same napovedne premice smo izračunali tudi interval negotovosti. Ta temel
 <img src="https://github.com/user-attachments/assets/9c8bd7d9-d93f-4cd0-9675-e4f88be4d1cb" width="90%" />
 <br><br>
 
-Na zadnje vprašanje lahko najlažje odgovorimo s pomočjo korelacijske matrike. Ta razkriva, kateri dejavniki so najmočneje povezani s kakovostjo življenja. Opazimo, da ima kakovost življenja najvišjo pozitivno korelacijo z zadovoljstvom z življenjem ter kupno močjo, kar nakazuje, da sta za posameznike ključnega pomena predvsem finančna varnost in splošno zadovoljstvo z življenjem.
+Korelacijska matrika omogoča vpogled v povezanost med spremenljivkami in tako pomaga odgovoriti na vprašanje, kateri faktorji vplivajo na kakovost življenja. Ta razkriva, kateri dejavniki so najmočneje povezani s kakovostjo življenja. Opazimo, da ima kakovost življenja najvišjo pozitivno korelacijo z zadovoljstvom z življenjem ter kupno močjo, kar nakazuje, da sta za posameznike ključnega pomena predvsem finančna varnost in splošno zadovoljstvo z življenjem.
 
 Prav tako je razvidno, da ima indeks onesnaževanja izrazit negativen vpliv, kar pomeni, da ljudje visoko vrednotijo čisto in zdravo okolje. Pomembno vlogo ima tudi kakovost zdravstvenega sistema, saj ta neposredno vpliva na daljšo pričakovano življenjsko dobo in višjo kakovost vsakdanjega življenja.
 
@@ -99,7 +99,7 @@ Z linearno regresijo  pa lahko napovemo da bo po naših napovedih večino držav
 <img width="1989" height="2395" alt="image" src="https://github.com/user-attachments/assets/8c37efc4-e0f7-473b-8ef6-f0d95e4ae7ad" width="75%"/>
 <br><br>
 ## Aplikacija streamlit
-Naredili smo tudi aplikacijo ki omogoča interaktiven vpogled v podatke. Vsebuje opcijo za zemljevid kjer lahko paogledamo borda_count celega sveta ali pa pogledamo vrednosti posameznih atributov druga opcija pa nam omogoča primerjavo posameznih držav po izbranih atributih. Aplikacija se nahaja pod Releases kjer so tudi navodila za zagon aplikacija pa je tudi objavljena na [link](https://pr2602-dyglvptx874uybcsu7rwgx.streamlit.app/).
+Naredili smo tudi aplikacijo ki omogoča interaktiven vpogled v podatke. Vsebuje opcijo za zemljevid kjer lahko paogledamo borda_count celega sveta ali pa pogledamo vrednosti posameznih atributov druga opcija pa nam omogoča primerjavo posameznih držav po izbranih atributih. Zadnja opcija je primerjava teredndov kejr s lahko izberom države in primerjamo njihove trende med sabo, Aplikacija pa je tudi objavljena na [stramlit](https://pr2602-dyglvptx874uybcsu7rwgx.streamlit.app/) njena koda se pa nahaja na [koda](https://github.com/VKFRIGH/PR2602/tree/main/app).
 
 ## Zaključek in povezave do kode ter podrobnejšega opisa postopkov
 
