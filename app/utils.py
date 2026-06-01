@@ -79,8 +79,8 @@ def _build_data_BK():
     cc = coco.CountryConverter()
     #majhne datoteke, ni potrebe po parquetu
     df_qol = pd.read_csv('app/data/quality_of_life_indices_by_country.csv')
-    df_analysis = pd.read_csv('app/data/growth_analysis.csv')
-    df_analysis['iso_code'] = cc.convert(names=df_analysis['Country Name'], to='ISO3')
+    df_growth = pd.read_csv('app/data/growth_analysis.csv')
+    df_growth['iso_code'] = cc.convert(names=df_growth['Country Name'], to='ISO3')
     # Coerce Year to a four-digit integer (e.g. '2014/2' -> 2014) and ensure numeric QoL
     df_qol['Year'] = df_qol['Year'].astype(str).str.extract(r'(\d{4})')[0]
     df_qol['Year'] = pd.to_numeric(df_qol['Year'], errors='coerce')
@@ -88,7 +88,7 @@ def _build_data_BK():
     df_qol['Quality of Life Index'] = pd.to_numeric(df_qol['Quality of Life Index'], errors='coerce')
     df_qol = df_qol.dropna(subset=['Year', 'Quality of Life Index']).copy()
     df_qol['Year'] = df_qol['Year'].astype(int)
-    return (df_qol, df_analysis)
+    return (df_qol, df_growth)
 
 
 @st.cache_data
@@ -101,7 +101,29 @@ def load_data():
 def load_data_BK():
     return _build_data_BK()
 
-        
+@st.cache_data
+def calculate_correlations():
+    df_qol, df_growth = load_data_BK()
+
+    factors = [
+    'Purchasing Power Index',
+    'Safety Index',
+    'Health Care Index',
+    'Cost of Living Index',
+    'Property Price to Income Ratio',
+    'Traffic Commute Time Index',
+    'Pollution Index',
+    ]
+
+    features = df_qol.groupby('Country Name')[factors].mean(numeric_only=True)
+    analysis_df = features.join(df_growth.set_index('Country Name')[['Stable Growth', "Kategorija"]]).dropna()
+    analysis_df = analysis_df.reset_index().set_index('Country Name')
+
+    corr_matrix = analysis_df[factors + ['Stable Growth']].corr()
+
+    correlation_with_growth = corr_matrix.loc[factors, 'Stable Growth'].sort_values(ascending=False)
+
+    return correlation_with_growth, corr_matrix, analysis_df
 
 
 NUMERIC_COLS = [
